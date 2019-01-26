@@ -46,3 +46,10 @@
 test.c
 lcs_my.c
 lcs2.c
+
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
