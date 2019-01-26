@@ -1,5 +1,6 @@
-/*--------- Graph representation ------------
-*using Adjacency Matrix
+/*--------- Dynamic Programming------------
+*Implementation of Floyed Warshall algo - All pair shortest path
+*
 */
 
 #include<stdio.h>
@@ -34,6 +35,28 @@ void main(){
     }
   }
   
+  printGraph(graph,node);
+  printf("\n");
+
+  iteration=1;
+  while(iteration<=node){
+    for(i=1;i<=node;i++){
+      for(j=1;j<=node;j++){
+        if(graph[i][j]>graph[i][iteration]+graph[iteration][j]){
+          graph[i][j]=graph[i][iteration]+graph[iteration][j];
+        }
+        
+      }
+    }
+
+    printf("G%d\n",iteration);
+    printGraph(graph,node);
+    printf("\n");
+  
+    iteration++;
+  }
+
+  printf("\n\nShortest distance matrix-\n",iteration);
   printGraph(graph,node);
   printf("\n");
 
