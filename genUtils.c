@@ -31,3 +31,20 @@ void Swap(int *a, int *b){
   *a=*b;
   *b=temp;
 }
+
+int stringLen(char a[]){
+  int i=0;
+  while(a[i]!='\0'){
+    i++;
+  }
+  return i;
+}
+
+void stringCopy(char from[],char to[]){
+  int i=0;
+  while(from[i]!='\0'){
+    to[i]=from[i];
+    i++;
+  }
+  to[i]=from[i];
+}
