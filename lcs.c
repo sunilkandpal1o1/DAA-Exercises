@@ -6,13 +6,13 @@
 #include "genUtils.c"
 #include<stdio.h>
 void main(){
-  char str1[6]={'a','c','b','b','a','\0'};
-  char str2[9]={'a','c','c','b','a','a','b','a','\0'};
+  char str1[7]={'a','u','a','i','l','l','\0'};
+  char str2[10]={'s','a','i','n','l','l','u','i','u','\0'};
 
-  int str1Len = 9, str2Len = 6;     //change the value according to the lenght of str1 and str2
+  int str1Len = 7, str2Len = 10;     //change the value according to the lenght of str1 and str2
   int table[str2Len][str1Len];
 
-  char lcs[6];
+  char lcs[7];
   int lcsLen,index;
   int i,j;
 
@@ -47,7 +47,7 @@ void main(){
   lcsLen = table[i][j];
   index = lcsLen;
   lcs[index--]='\0';
-  while(i!=0 || j!=0){
+  while(i!=0 && j!=0){
     if(str2[i-1] == str1[j-1]){
       lcs[index] = str1[j-1];
       index--;
@@ -61,5 +61,5 @@ void main(){
 
   printf("String1: %s\n",str1);
   printf("String2: %s\n",str2);
-  printf("Longest Common Subsequence: lenght-%d sequence-%s\n",lcs);
+  printf("Longest Common Subsequence: lenght- %d sequence- %s\n",lcsLen,lcs);
 }

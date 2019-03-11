@@ -33,7 +33,7 @@ void Quicksort(int *array,int start, int end){
       int mid = Partition(array,start,end);
       //printArray(array,end+1);
       //printf("mid found at %d, array afterwards: ",mid);
-      //printArray(array, sizeof array / sizeof *array); // sizeof part to calculate lenght of array though it doesn't work for array as parameter
+      //printArray(array, sizeof array / sizeof *array); // sizeof part to calculate lenght of array, it doesn't work for array as parameter
       printArray(array,size);
       Quicksort(array,start,mid-1);
       Quicksort(array,mid+1,end);
